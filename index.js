@@ -19,6 +19,8 @@ app.use(express.json());
 app.use(cors());
 app.use(cookieparser());
 
+
+app.get('/', (req,res)=>{res.send("Evaluation Deployed Link")})
 app.use(UserRouter);
 app.use(Authenticator)
 app.use(LogoutRouter)
