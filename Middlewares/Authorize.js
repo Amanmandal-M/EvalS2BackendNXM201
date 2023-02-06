@@ -1,15 +1,15 @@
 const jwt = require('jsonwebtoken');
 
 const authorize = (roles) => {
-  //inner function
-  return (req, res, next) => {
-    const UserRoles = req.body.role;
-    if (roles.includes(UserRoles)) {
-      next();
-    } else {
-      res.send("not authorised");
-    }
-  };
+  
+      return (req, res, next) => {
+        const UserRoleses = req.body.role;
+        if (roles.includes(UserRoleses)) {
+          next();
+        } else {
+          res.send("not authorised");
+        }
+      };
 };
 
 module.exports = { authorize };
